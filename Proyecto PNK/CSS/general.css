@@ -214,44 +214,38 @@ article img {
 }
 
 /* Buscador*/
+/* Updated buscador style */
 .buscador {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
   max-width: 1000px;
 }
 
 .filtros-busqueda {
-  display: inline-block;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
 }
 
 .grupo-filtro {
   display: flex;
   flex-direction: column;
-  margin-right: 15px;
+  min-width: 150px;
 }
 
-.grupo-filtro label {
-  margin-bottom: 5px;
-  font-weight: bold;
+.grupo-filtro select {
+  height: 40px;
 }
 
-.grupo-filtro select, 
-.input-group input, 
-.input-group select, 
-.input-group textarea {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  width: auto;
-  min-width: 100px;
+.btn-buscar {
+  align-self: flex-end;
+  margin-bottom: 1px;
+  height: 40px;
 }
 
 /*Cambios al login*/
@@ -280,6 +274,21 @@ article img {
 }
 
 .formulario-login input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formulario-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario-registro .input-group input,
+.formulario-registro .input-group select,
+.formulario-registro .input-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
