@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PNK Inmobiliaria</title>
+    <link rel="stylesheet" href="css/general.css">
+</head>
+
+<body>
+    <div class="pagina-dashboard">
+        <header>
+            <h1><a href="pagina_inicial.html">PNK INMOBILIARIA</a></h1>
+            <div class="nav-principal">
+                <ul>
+                    <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
+                    <li><a href="registro_usuario.html" class="btn-registro">Registrar</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="dashboard-container">
+            <div class="dashboard-header">
+                <h2>Panel de Control - Estadísticas de Usuario</h2>
+            </div>
+
+            <div class="dashboard-actions">
+                <a href="registro_propiedad.html" class="btn-dashboard">Registrar Propiedad</a>
+                <a href="pagina_inicial.html" class="btn-dashboard">Ver Propiedades</a>
+            </div>
+
+            <div class="dashboard-summary">
+                <h3>Resumen de Actividad</h3>
+                <ul>
+                    <li>Tienes mensajes en tu buzón</li>
+                    <li>250 personas vieron tu anuncio</li>
+                    <li>¡Recuerda terminar de configurar tu perfil!</li>
+                </ul>
+            </div>
+
+            <div class="estadisticas-lista">
+                <div class="estadistica-card">
+                    <div class="grafica-container">
+                        <h3>Actividad Reciente</h3>
+                        <img src="IMG/grafica.png" alt="Gráfica de estadísticas" width="300">
+                    </div>
+                </div>
+                <div class="grafica-card">
+                    <h3>Visitas por Mes</h3>
+                    <img src="img/graficos_puntos.png" alt="Gráfica de visitas mensuales" width="300">
+                </div>
+                <div class="grafica-card">
+                    <h3>Interés por Propiedad</h3>
+                    <img src="IMG/torta.avif" alt="Gráfica de interés" width="300">
+                </div>
+            </div>
+
+            <div class="actualizar-perfil">
+                <h2>Actualizar Perfil de Usuario</h2>
+                <h3>Seleccione el tipo de perfil que desea:</h3>
+                <div class="opcion-perfil">
+                    <input type="radio" id="propietario" name="tipo_perfil" value="propietario">
+                    <label for="propietario">Registrarme como Propietario</label>
+
+                    <div class="formulario-adicional propietario-form" id="formulario-propietario">
+                        <form action="procesar_actualizacion.html" method="get">
+                            <div class="input-group">
+                                <label for="num_propiedad">N° de la propiedad según registro de Bienes
+                                    Raíces:</label>
+                                <input type="text" id="num_propiedad" name="num_propiedad">
+                            </div>
+                            <div class="botones">
+                                <button type="submit" class="btn-actualizar">Actualizar a Propietario</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="opcion-perfil">
+                    <input type="radio" id="gestor" name="tipo_perfil" value="gestor">
+                    <label for="gestor">Registrarme como Gestor Inmobiliario FREE</label>
+
+                    <div class="formulario-adicional gestor-form" id="gestor-form">
+                        <form action="procesar_actualizacion.html" method="get">
+                            <div class="input-group">
+                                <label for="certificado">Certificado de antecedentes:</label>
+                                <input type="file" id="certificado" name="certificado">
+                            </div>
+                            <div class="botones">
+                                <button type="submit" class="btn-actualizar">Actualizar a Gestor</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="botones-principales">
+                <a href="pagina_inicial.html" class="btn-volver">Volver a Inicio</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>PNK INMOBILIARIA. Todos los derechos reservados &copy; 2025</p>
+        </footer>
+    </div>
+</body>
+
+</html>
