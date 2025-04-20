@@ -524,27 +524,41 @@ article img {
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Message pages styling */
+/* Paginas de procesar */
+.pagina-confirmacion {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .mensaje-confirmacion {
-  text-align: center;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
+  text-align: center;
 }
 
-.mensaje-confirmacion p {
-  font-size: 1.2em;
+.mensaje-confirmacion h2 {
+  color: #193071;
   margin-bottom: 20px;
 }
 
-.informacion-ayuda {
+.mensaje-confirmacion p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
   max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
 }
+
+.contacto-info {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
 
 /* Centrar paginas de confirmar recuperacion y procesar registro */
 .pagina-confirmar-recuperacion main,
