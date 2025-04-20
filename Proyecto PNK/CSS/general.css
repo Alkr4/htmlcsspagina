@@ -546,7 +546,7 @@ article img {
   text-align: center;
 }
 
-/* General centering for content pages */
+/* Centrar paginas de confirmar recuperacion y procesar registro */
 .pagina-confirmar-recuperacion main,
 .pagina-procesar-registro main {
   display: flex;
