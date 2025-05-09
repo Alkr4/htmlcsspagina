@@ -5,36 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PNK Inmobiliaria</title>
-    <link rel="stylesheet" href="css/general.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="pagina-inicio">
-        <div class="cabezal">
-            <header>
-                <h1><a href="pagina_inicial.html">PNK INMOBILIARIA</a></h1>
-                <nav class="nav-principal">
-                    <ul>
-                        <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
-                        <li><a href="registro_usuario.html" class="btn-registro">Registrar</a></li>
+    <div class="container-fluid p-0">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="pagina_inicial.html">PNK INMOBILIARIA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-light me-2" href="login.html">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary" href="registro_usuario.html">Registrar</a>
+                        </li>
                     </ul>
-                </nav>
-             </header>
-        </div>
+                </div>
+            </div>
+        </nav>
 
-        <div class="buscador">
-            <form class="filtros-busqueda" method="get">
-                <div class="grupo-filtro">
-                    <select name="provincia" id="provincia">
+        <!-- Search Form -->
+        <div class="container py-4 bg-light">
+            <form class="row g-3 justify-content-center">
+                <div class="col-md-3">
+                    <select class="form-select" name="provincia" id="provincia">
                         <option value="">Seleccione provincia</option>
                         <option value="Elqui">Elqui</option>
                         <option value="Limari">Limarí</option>
                         <option value="Choapa">Choapa</option>
                     </select>
                 </div>
-        
-                <div class="grupo-filtro">
-                    <select name="comunas" id="comunas">
+                <div class="col-md-3">
+                    <select class="form-select" name="comunas" id="comunas">
                         <option value="">Seleccione comuna</option>
                         <option value="Andacollo">Andacollo</option>
                         <option value="Coquimbo">Coquimbo</option>
@@ -44,83 +55,113 @@
                         <option value="Vicuña">Vicuña</option>
                     </select>
                 </div>
-        
-                <div class="grupo-filtro">
-                    <select name="sector" id="sector">
+                <div class="col-md-3">
+                    <select class="form-select" name="sector" id="sector">
                         <option value="">Seleccione sector</option>
                         <option value="sector_a">Sector A</option>
                         <option value="sector_b">Sector B</option>
                         <option value="sector_c">Sector C</option>
                     </select>
                 </div>
-                <button type="submit" class="btn-buscar">Buscar</button>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary w-100">Buscar</button>
+                </div>
             </form>
         </div>
 
-        <main class="contenido-principal">
-            <h2>Propiedades Destacadas</h2>
-            <div class="propiedades-destacadas">
-                <article class="propiedad-card">
-                    <img src="img/casa_1.webp" alt="Casa en La Serena">
-                    <div class="propiedad-info">
-                        <h3>Casa en venta - La Serena</h3>
-                        <p class="precio">Precio: $1.000.000</p>
-                        <a href="detalles_propiedad.html" class="btn-detalles">Ver más</a>
+        <!-- Main Content -->
+        <main class="container my-4">
+            <h2 class="text-center mb-4">Propiedades Destacadas</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Property Card 1 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/casa_1.webp" class="card-img-top" alt="Casa en La Serena">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa en venta - La Serena</h5>
+                            <p class="card-text fw-bold">Precio: $1.000.000</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="detalles_propiedad.html" class="btn btn-primary w-100">Ver más</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="propiedad-card">
-                    <img src="img/casa_2.jpg" alt="Casa en Coquimbo">
-                    <div class="propiedad-info">
-                        <h3>Casa en venta - Coquimbo</h3>
-                        <p class="precio">Precio: $1.000.000</p>
-                        <a href="detalles_propiedad.html" class="btn-detalles">Ver más</a>
+                </div>
+                <!-- Property Card 2 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/casa_2.jpg" class="card-img-top" alt="Casa en Coquimbo">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa en venta - Coquimbo</h5>
+                            <p class="card-text fw-bold">Precio: $1.000.000</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="detalles_propiedad.html" class="btn btn-primary w-100">Ver más</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="propiedad-card">
-                    <img src="img/departamento_1.webp" alt="Departamento en La Serena">
-                    <div class="propiedad-info">
-                        <h3>Departamento en venta - La Serena</h3>
-                        <p class="precio">Precio: $1.000.000</p>
-                        <a href="detalles_propiedad.html" class="btn-detalles">Ver más</a>
+                </div>
+                <!-- Property Card 3 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/departamento_1.webp" class="card-img-top" alt="Departamento en La Serena">
+                        <div class="card-body">
+                            <h5 class="card-title">Departamento en venta - La Serena</h5>
+                            <p class="card-text fw-bold">Precio: $1.000.000</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="detalles_propiedad.html" class="btn btn-primary w-100">Ver más</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="propiedad-card">
-                    <img src="img/departamento_2.jpg" alt="Departamento en Vicuña">
-                    <div class="propiedad-info">
-                        <h3>Departameno en venta - Vicuña</h3>
-                        <p class="precio">Precio: $1.000.000</p>
-                        <a href="detalles_propiedad.html" class="btn-detalles">Ver más</a>
+                </div>
+                <!-- Property Card 4 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/departamento_2.jpg" class="card-img-top" alt="Departamento en Vicuña">
+                        <div class="card-body">
+                            <h5 class="card-title">Departamento en venta - Vicuña</h5>
+                            <p class="card-text fw-bold">Precio: $1.000.000</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="detalles_propiedad.html" class="btn btn-primary w-100">Ver más</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="propiedad-card">
-                    <img src="img/terreno_1.webp" alt="Tereno en La Higuera">
-                    <div class="propiedad-info">
-                        <h3>Terreno en venta - La Higuera</h3>
-                        <p class="precio">Precio: $1.000.000</p>
-                        <a href="detalles_propiedad.html" class="btn-detalles">Ver más</a>
+                </div>
+                <!-- Property Card 5 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/terreno_1.webp" class="card-img-top" alt="Terreno en La Higuera">
+                        <div class="card-body">
+                            <h5 class="card-title">Terreno en venta - La Higuera</h5>
+                            <p class="card-text fw-bold">Precio: $1.000.000</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="detalles_propiedad.html" class="btn btn-primary w-100">Ver más</a>
+                        </div>
                     </div>
-                </article>
-
-                <article class="propiedad-card">
-                    <img src="img/parcela_2.jpg" alt="Parcela en Andacollo">
-                    <div class="propiedad-info">
-                        <h3>Terreno en venta - Andacollo</h3>
-                        <p class="precio">Precio: $1.000.000</p>
-                        <a href="detalles_propiedad.html" class="btn-detalles">Ver más</a>
+                </div>
+                <!-- Property Card 6 -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="img/parcela_2.jpg" class="card-img-top" alt="Parcela en Andacollo">
+                        <div class="card-body">
+                            <h5 class="card-title">Terreno en venta - Andacollo</h5>
+                            <p class="card-text fw-bold">Precio: $1.000.000</p>
+                        </div>
+                        <div class="card-footer bg-white border-top-0">
+                            <a href="detalles_propiedad.html" class="btn btn-primary w-100">Ver más</a>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </main>
-        
-        <footer class="pie-pagina">
-            <p>PNK INMOBILIARIA. Todos los derechos reservados &copy; 2025</p>
-        </footer>
 
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p class="m-0">PNK INMOBILIARIA. Todos los derechos reservados &copy; 2025</p>
+        </footer>
     </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

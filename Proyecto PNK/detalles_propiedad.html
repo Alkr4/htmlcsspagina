@@ -5,127 +5,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalle de Propiedad - PNK Inmobiliaria</title>
-    <link rel="stylesheet" href="css/general.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="pagina-detalle">
-        <div class="cabezal">
-            <header>
-                <h1><a href="pagina_inicial.html">PNK INMOBILIARIA</a></h1>
-                <div class="nav-principal">
-                    <ul>
-                        <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
-                        <li><a href="registro_usuario.html" class="btn-registro">Registrar</a></li>
+    <div class="container-fluid p-0">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="pagina_inicial.html">PNK INMOBILIARIA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-light me-2" href="login.html">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary" href="registro_usuario.html">Registrar</a>
+                        </li>
                     </ul>
                 </div>
-            </header>
-        </div>
+            </div>
+        </nav>
 
-        <main>
-            <div class="detalle-propiedad">
-                <div class="galeria-container">
-                    <div class="galeria">
-                        <img src="IMG/placeholder.webp" alt="Foto 1 de la propiedad">
+        <!-- Property Details -->
+        <main class="container my-4">
+            <div class="row">
+                <!-- Property Images -->
+                <div class="col-lg-7 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="IMG/placeholder.webp" class="card-img-top" alt="Foto 1 de la propiedad">
+                        <!-- Here you could add a carousel for multiple photos -->
                     </div>
                 </div>
 
-
-                <div class="info-basica">
-                    <div class="titulo-precio">
-                        <h1>Casa Mediterránea - Sector Alto Las Condes</h1>
-                        <p class="direccion">Av. Las Palmeras 3870, Las Condes, Santiago</p>
+                <!-- Property Basic Info -->
+                <div class="col-lg-5">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-body">
+                            <h2 class="card-title mb-1">Casa Mediterránea - Sector Alto Las Condes</h2>
+                            <p class="text-muted mb-3">Av. Las Palmeras 3870, Las Condes, Santiago</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h3 class="text-primary mb-0">$ 999.999</h3>
+                                    <span class="text-muted">UF 9.999</span>
+                                </div>
+                                <button class="btn btn-primary" id="solicitar-visita">Solicitar visita</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="precio">
-                        <p>$ 999.999</p>
-                        <span>UF 9.999</span>
-                    </div>
-                </div>
 
-                <div class="descripcion">
-                    <h2>Descripción</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ut ipsa, ducimus deleniti sapiente similique quisquam facere fugiat vitae sit nulla perspiciatis accusantium est fuga laboriosam omnis cumque tenetur voluptatem.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem placeat a sed, odio eveniet nesciunt ut corporis blanditiis, reprehenderit aut libero voluptate distinctio quod ea nemo fugit, maiores iste deleniti.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora inventore necessitatibus non ab ut eius quam numquam iusto quia veniam, maiores asperiores accusantium consequuntur minus saepe eum nam commodi? Perferendis!</p>
-                </div>
-
-                <div class="detalles">
-                    <div class="seccion-detalles">
-                        <h2>Detalles de la propiedad</h2>
-                        <ul class="lista-detalles">
-                            <li><span>Tipo de propiedad:</span> <span>Casa</span></li>
-                            <li><span>Área construida:</span> <span>250 m²</span></li>
-                            <li><span>Área total del terreno:</span> <span>500 m²</span></li>
-                            <li><span>Dormitorios:</span> <span>4</span></li>
-                            <li><span>Baños:</span> <span>3</span></li>
-                            <li><span>Fecha de publicación:</span> <span>12/04/2025</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="amenidades">
-                    <h2>Características adicionales</h2>
-                    <div class="lista-amenidades">
-                        <div class="amenidad">
-                            <div class="amenidad-icon">✓</div>
-                            <span>Bodega</span>
+                    <!-- Contact Info -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Contacta por la propiedad</h5>
                         </div>
-                        <div class="amenidad">
-                            <div class="amenidad-icon">✓</div>
-                            <span>Estacionamiento (2)</span>
-                        </div>
-                        <div class="amenidad">
-                            <div class="amenidad-icon">✓</div>
-                            <span>Logia</span>
-                        </div>
-                        <div class="amenidad">
-                            <div class="amenidad-icon">✓</div>
-                            <span>Cocina amoblada</span>
-                        </div>
-                        <div class="amenidad">
-                            <div class="amenidad-icon">✓</div>
-                            <span>Antejardín</span>
-                        </div>
-                        <div class="amenidad">
-                            <div class="amenidad-icon">✓</div>
-                            <span>Patio trasero</span>
-                        </div>
-                        <div class="amenidad">
-                            <div class="amenidad-icon">✓</div>
-                            <span>Piscina</span>
+                        <div class="card-body">
+                            <p class="mb-1"><i class="bi bi-telephone me-2"></i> +56 9 8765 4321</p>
+                            <p class="mb-0"><i class="bi bi-envelope me-2"></i> cristopher.latapiat@pnkinmobiliaria.cl</p>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="solicitud-visita">
-                    <button class="boton-solicitud" id="solicitar-visita">Solicitar visita</button>
-                </div>
-
-
-                <div class="ubicacion">
-                    <h2>Ubicación</h2>
-                    <div class="mapa">
-                        <img src="IMG/google_maps.png" alt="" width=300>
-                    </div>
-                </div>
-
-                <div class="info-agente">
-                    <h2>Contacta por la propiedad</h2>
-                    <div class="tarjeta-agente">
-                        <div class="datos-agente">
-                            <p>Contacto: +56 9 8765 4321</p>
-                            <p>Email: cristopher.latapiat@pnkinmobiliaria.cl</p>
+            <!-- Property Description -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Descripción</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima ut ipsa, ducimus deleniti sapiente similique quisquam facere fugiat vitae sit nulla perspiciatis accusantium est fuga laboriosam omnis cumque tenetur voluptatem.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem placeat a sed, odio eveniet nesciunt ut corporis blanditiis, reprehenderit aut libero voluptate distinctio quod ea nemo fugit, maiores iste deleniti.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora inventore necessitatibus non ab ut eius quam numquam iusto quia veniam, maiores asperiores accusantium consequuntur minus saepe eum nam commodi? Perferendis!</p>
                         </div>
                     </div>
                 </div>
-                <a href="pagina_inicial.html" class="btn-volver">Volver al Inicio</a>
+            </div>
+
+            <div class="row">
+                <!-- Property Details -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Detalles de la propiedad</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Tipo de propiedad:</span>
+                                    <span class="fw-bold">Casa</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Área construida:</span>
+                                    <span class="fw-bold">250 m²</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Área total del terreno:</span>
+                                    <span class="fw-bold">500 m²</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Dormitorios:</span>
+                                    <span class="fw-bold">4</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Baños:</span>
+                                    <span class="fw-bold">3</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between">
+                                    <span>Fecha de publicación:</span>
+                                    <span class="fw-bold">12/04/2025</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Amenities -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Características adicionales</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6 mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Bodega
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Estacionamiento (2)
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Logia
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Cocina amoblada
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Antejardín
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Patio trasero
+                                </div>
+                                <div class="col-6 mb-2">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>Piscina
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Location -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-light">
+                            <h5 class="mb-0">Ubicación</h5>
+                        </div>
+                        <div class="card-body text-center">
+                            <img src="IMG/google_maps.png" alt="Mapa de ubicación" class="img-fluid" style="max-width: 600px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2 col-md-6 mx-auto mb-5">
+                <a href="pagina_inicial.html" class="btn btn-outline-primary">Volver al Inicio</a>
             </div>
         </main>
 
-
-
-        <footer class="pie-pagina">
-            <p>PNK INMOBILIARIA. Todos los derechos reservados &copy; 2025</p>
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p class="m-0">PNK INMOBILIARIA. Todos los derechos reservados &copy; 2025</p>
         </footer>
     </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
