@@ -5,105 +5,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - PNK Inmobiliaria</title>
-    <link rel="stylesheet" href="css/general.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div class="pagina-dashboard">
-        <header>
-            <h1><a href="pagina_inicial.html">PNK INMOBILIARIA</a></h1>
-            <div class="nav-principal">
-                <ul>
-                    <li><a href="login.html" class="btn-login">Iniciar Sesión</a></li>
-                    <li><a href="registro_usuario.html" class="btn-registro">Registrar</a></li>
-                </ul>
+    <div class="container-fluid p-0">
+        <!-- Navbar (igual a la página inicial) -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="pagina_inicial.html">PNK INMOBILIARIA</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-light me-2" href="login.html">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-primary" href="registro_usuario.html">Registrar</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </header>
+        </nav>
 
-        <div class="dashboard-container">
-            <div class="dashboard-header">
-                <h2>Panel de Control - Estadísticas de Usuario</h2>
-            </div>
-
-            <div class="dashboard-actions">
-                <a href="registro_propiedad.html" class="btn-dashboard">Registrar Propiedad</a>
-                <a href="#" class="btn-dashboard">Ver Propiedades</a>
-            </div>
-
-            <div class="dashboard-summary">
-                <h3>Resumen de Actividad</h3>
-                <ul>
-                    <li>Tienes mensajes en tu buzón</li>
-                    <li>250 personas vieron tu anuncio</li>
-                    <li>¡Recuerda terminar de configurar tu perfil!</li>
-                </ul>
-            </div>
-
-            <div class="estadisticas-lista">
-                <div class="estadistica-card">
-                    <div class="grafica-container">
-                        <h3>Actividad Reciente</h3>
-                        <img src="IMG/grafica.png" alt="Gráfica de estadísticas" width="300">
+        <!-- Dashboard Content -->
+        <main class="container my-5">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Panel de Control - Estadísticas de Usuario</h2>
+                    
+                    <!-- Action Buttons -->
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+                        <a href="registro_propiedad.html" class="btn btn-primary">Registrar Propiedad</a>
+                        <a href="#" class="btn btn-outline-primary">Ver Propiedades</a>
                     </div>
-                </div>
-                <div class="grafica-card">
-                    <h3>Visitas por Mes</h3>
-                    <img src="img/graficos_puntos.png" alt="Gráfica de visitas mensuales" width="300">
-                </div>
-                <div class="grafica-card">
-                    <h3>Interés por Propiedad</h3>
-                    <img src="IMG/torta.avif" alt="Gráfica de interés" width="300">
-                </div>
-            </div>
-
-            <div class="actualizar-perfil">
-                <h2>Actualizar Perfil de Usuario</h2>
-                <h3>Seleccione el tipo de perfil que desea:</h3>
-                <div class="opcion-perfil">
-                    <input type="radio" id="propietario" name="tipo_perfil" value="propietario">
-                    <label for="propietario">Registrarme como Propietario</label>
-
-                    <div class="formulario-adicional propietario-form" id="formulario-propietario">
-                        <form action="procesar_actualizacion.html" method="get">
-                            <div class="input-group">
-                                <label for="num_propiedad">N° de la propiedad según registro de Bienes
-                                    Raíces:</label>
-                                <input type="text" id="num_propiedad" name="num_propiedad">
-                            </div>
-                            <div class="botones">
-                                <button type="submit" class="btn-actualizar">Actualizar a Propietario</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="opcion-perfil">
-                    <input type="radio" id="gestor" name="tipo_perfil" value="gestor">
-                    <label for="gestor">Registrarme como Gestor Inmobiliario FREE</label>
-
-                    <div class="formulario-adicional gestor-form" id="gestor-form">
-                        <form action="procesar_actualizacion.html" method="get">
-                            <div class="input-group">
-                                <label for="certificado">Certificado de antecedentes:</label>
-                                <input type="file" id="certificado" name="certificado">
-                            </div>
-                            <div class="botones">
-                                <button type="submit" class="btn-actualizar">Actualizar a Gestor</button>
-                            </div>
-                        </form>
+                    
+                    <!-- Summary -->
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Resumen de Actividad</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Tienes mensajes en tu buzón</li>
+                                <li class="list-group-item">250 personas vieron tu anuncio</li>
+                                <li class="list-group-item">¡Recuerda terminar de configurar tu perfil!</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="botones-principales">
-                <a href="pagina_inicial.html" class="btn-volver">Volver a Inicio</a>
+            <!-- Statistics Cards -->
+            <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+                <!-- Activity Card -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Actividad Reciente</h3>
+                            <img src="img/grafica.png" class="img-fluid" alt="Gráfica de estadísticas">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Visits Card -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Visitas por Mes</h3>
+                            <img src="img/graficos_puntos.png" class="img-fluid" alt="Gráfica de visitas mensuales">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Interest Card -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Interés por Propiedad</h3>
+                            <img src="img/torta.avif" class="img-fluid" alt="Gráfica de interés">
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <footer>
-            <p>PNK INMOBILIARIA. Todos los derechos reservados &copy; 2025</p>
+            <!-- Profile Update Section -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title">Actualizar Perfil de Usuario</h2>
+                            <p class="card-text">Seleccione el tipo de perfil que desea:</p>
+                            
+                            <div class="accordion" id="profileAccordion">
+                                <!-- Owner Option -->
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ownerForm">
+                                            <input class="form-check-input me-2" type="radio" name="tipo_perfil" id="propietario" value="propietario">
+                                            <label class="form-check-label" for="propietario">Registrarme como Propietario</label>
+                                        </button>
+                                    </h3>
+                                    <div id="ownerForm" class="accordion-collapse collapse" data-bs-parent="#profileAccordion">
+                                        <div class="accordion-body">
+                                            <form action="procesar_actualizacion.html" method="get">
+                                                <div class="mb-3">
+                                                    <label for="num_propiedad" class="form-label">N° de la propiedad según registro de Bienes Raíces:</label>
+                                                    <input type="text" class="form-control" id="num_propiedad" name="num_propiedad">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Actualizar a Propietario</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Manager Option -->
+                                <div class="accordion-item">
+                                    <h3 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#managerForm">
+                                            <input class="form-check-input me-2" type="radio" name="tipo_perfil" id="gestor" value="gestor">
+                                            <label class="form-check-label" for="gestor">Registrarme como Gestor Inmobiliario FREE</label>
+                                        </button>
+                                    </h3>
+                                    <div id="managerForm" class="accordion-collapse collapse" data-bs-parent="#profileAccordion">
+                                        <div class="accordion-body">
+                                            <form action="procesar_actualizacion.html" method="get">
+                                                <div class="mb-3">
+                                                    <label for="certificado" class="form-label">Certificado de antecedentes:</label>
+                                                    <input class="form-control" type="file" id="certificado" name="certificado">
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Actualizar a Gestor</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back Button -->
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <a href="pagina_inicial.html" class="btn btn-outline-secondary">Volver a Inicio</a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer (igual a la página inicial) -->
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p class="m-0">PNK INMOBILIARIA. Todos los derechos reservados &copy; 2025</p>
         </footer>
     </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
